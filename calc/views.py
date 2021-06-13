@@ -7,8 +7,11 @@ def Home(request):
 
 def Login(request):
 
-     val1 = request.POST.get('UserName')
-     val2 = request.POST.get('Password')
+     UserName = request.GET['UserName']
+     Password = request.GET['Password']
+     # if  str(var1)=='None':
+     #      res = 'UserName is Empty '
+     # else:
+     #     res = 'UserName is not Empty '+var1
 
-     res = 2 + 5
-     return render(request,"Login.html",{'Result':res});
+     return render(request,"Login.html",{'Result':UserName})
